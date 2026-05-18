@@ -13,3 +13,6 @@ TERMINAL
 
 <img width="1809" height="949" alt="image" src="https://github.com/user-attachments/assets/69c6dabe-15a3-4d25-9866-d9bfb9e9d3e8" />
 
+<img width="1809" height="544" alt="image" src="https://github.com/user-attachments/assets/18f99c2d-21de-4925-b052-35031fdfdc23" />
+
+
