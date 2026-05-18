@@ -1,4 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="Asus TUF A15"
-
-ENTRYPOINT ["top", "-b"]
+FROM eclipse-temurin:25-jdk
+ARG JAR_FILE=target/*.jar
+COPY ./target/Pertemuan11-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080

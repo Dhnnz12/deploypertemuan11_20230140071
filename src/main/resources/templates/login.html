@@ -2,32 +2,47 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mahasiswa Portal</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-<form th:action="@{/login}" method="post">
 
-    <input type="text"
-           name="username"
-           placeholder="Username">
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+<div class="floating-shape shape-3"></div>
 
-    <input type="password"
-           name="password"
-           placeholder="Password">
+<div class="auth-page">
+    <div class="container" style="max-width: 450px; width: 100%;">
+        <div class="text-center">
+            <h2 style="font-size: 2rem; margin-top: 1rem;">Portal Login</h2>
+            <div class="section-title">Silakan Masuk</div>
+        </div>
+        
+        <form th:action="@{/login}" method="post" style="margin-top: 1.5rem;">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Masukkan username..." required>
+            </div>
 
-    <button type="submit">
-        Login
-    </button>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
 
-</form>
+            <button type="submit" class="btn btn-light-blue" style="width: 100%; margin-top: 1rem; font-size: 1.1rem;">
+                Masuk ke Portal
+            </button>
+        </form>
 
-<br>
-
-<p>Belum punya akun?</p>
-
-<a th:href="@{/register}">
-    Register di sini
-</a>
+        <div class="text-center mt-4" style="border-top: 2px solid var(--black); padding-top: 1.5rem;">
+            <p style="font-weight: 700; margin-bottom: 0.5rem;">Belum punya akun?</p>
+            <a th:href="@{/register}" class="btn btn-green" style="width: 100%; font-size: 1rem;">
+                Register di sini
+            </a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

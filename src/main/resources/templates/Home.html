@@ -2,29 +2,48 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Mahasiswa Portal</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-<h1>Home</h1>
 
-<p>
-    Username:
-    <span th:text="${user.username}"></span>
-</p>
+<div class="floating-shape shape-1" style="opacity: 0.5;"></div>
+<div class="floating-shape shape-2" style="opacity: 0.5;"></div>
+<div class="floating-shape shape-3" style="bottom: 20px; left: 20px; top: auto; opacity: 0.5;"></div>
 
-<p>
-    Nama:
-    <span th:text="${profile.nama}"></span>
-</p>
+<header class="nav-header">
+    <div class="nav-logo">MHS_PORTAL</div>
+    <div class="nav-links">
+        <a th:href="@{/logout}" class="btn btn-black">Logout</a>
+    </div>
+</header>
 
-<p>
-    Alamat:
-    <span th:text="${profile.alamat}"></span>
-</p>
-
-<a th:href="@{/logout}">
-    Logout
-</a>
+<div class="wrapper">
+    <div class="container">
+        <div class="section-title">Overview</div>
+        <h2>Dashboard Profil</h2>
+        
+        <div style="background: var(--white); border: var(--border-thick) solid var(--black); box-shadow: 4px 4px 0px 0px var(--black); padding: 2rem; margin-top: 1.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 2px solid var(--black); padding-bottom: 0.5rem;">
+                    <span style="font-weight: 900; text-transform: uppercase;">Username</span>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: var(--primary-blue);" th:text="${user.username}"></span>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; border-bottom: 2px solid var(--black); padding-bottom: 0.5rem;">
+                    <span style="font-weight: 900; text-transform: uppercase;">Nama Lengkap</span>
+                    <span style="font-weight: 700; font-size: 1.1rem;" th:text="${profile.nama}"></span>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; border-bottom: 2px solid var(--black); padding-bottom: 0.5rem;">
+                    <span style="font-weight: 900; text-transform: uppercase;">Alamat</span>
+                    <span style="font-weight: 700; font-size: 1.1rem;" th:text="${profile.alamat}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
